@@ -35,6 +35,22 @@ public class MaximumComputation {
 		System.out.println("The maximum number is: " + maximumNumber);
 	}
 	
+	public static void findMaximum(String firstString, String secondString, String thirdString) {
+		String maximumString;
+		
+		if(firstString.compareTo(secondString)>0 && firstString.compareTo(thirdString)>0) {
+			maximumString = firstString;
+		}
+		else if(secondString.compareTo(firstString)>0 && secondString.compareTo(thirdString)>0) {
+			maximumString = secondString;
+		}
+		else {
+			maximumString = thirdString;
+		}
+		
+		System.out.println("The maximum number is: " + maximumString);
+	}
+	
 	public static void main(String[] args) {
 
 		System.out.println("----- Welcome To Computing Maximum Of Three Numbers Using Java Generics ------");
@@ -45,6 +61,8 @@ public class MaximumComputation {
 		Float number1 = 12f, number2 = 8f, number3 = 7f;
 		findMaximum(number1, number2, number3);
 
+		String firstString = "Peach", secondString = "Banana", thirdString = "Apple";
+		findMaximum(firstString, secondString, thirdString);
 	}
 
 
